@@ -4082,12 +4082,17 @@ td:last-child {
     margin-bottom: var(--vspace-0_75);
 }
 
+.counter-items__item1 {
+    flex         : none;
+    width        : 32%;
+    margin-bottom: var(--vspace-0_625);
+}
+
 .counter-items__item {
     flex         : none;
     width        : 50%;
     margin-bottom: var(--vspace-0_625);
 }
-
 .counter-items .num {
     display       : inline-flex;
     align-items   : center;
