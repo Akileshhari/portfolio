@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Greatify Dashboard Design Case Study | Akilesh Portfolio</title>
+
+    <script>
+        document.documentElement.classList.remove('no-js');
+        document.documentElement.classList.add('js');
+    </script>
+
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <style>
+        /* Additional styles for the Greatify case study page */
+        :root {
+            --primary-50: #f0f9f0;
+            --primary-100: #dcf2dc;
+            --primary-200: #bde5bd;
+            --primary-300: #8fd38f;
+            --primary-400: #5abd5a;
+            --primary-500: #54b848; /* Base color */
+            --primary-600: #3a9a30;
+            --primary-700: #2e7a27;
+            --primary-800: #266121;
+            --primary-900: #21501d;
+        }
+                  .case-study-hero {
+            background: url('images/Uiux/greatify.png') center/cover no-repeat;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+            /* color: white; */
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+
+        .case-study-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.95);
+}
+
+        .case-study-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            opacity: 0.9;
+        }
+        
+        .case-study-hero p {
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
+        
+        .case-study-content {
+            padding: 80px 0;
+        }
+        
+        .case-study-section {
+            margin-bottom: 80px;
+        }
+        
+        .case-study-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--primary-700);
+        }
+        
+        .case-study-section h3 {
+            font-size: 1.75rem;
+            margin: 2rem 0 1rem;
+            color: var(--primary-600);
+        }
+        
+        .case-study-image {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin: 2rem 0;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .feature-card {
+            background: #f9f9f9;
+            padding: 2rem;
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+            border-left: 4px solid var(--primary-500);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-card h4 {
+            color: var(--primary-600);
+            margin-bottom: 1rem;
+        }
+        
+        .design-process {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 2rem 0;
+        }
+        
+        .process-step {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+            padding: 1.5rem;
+            margin: 0.5rem;
+            background: var(--primary-50);
+            border-radius: 12px;
+            border-top: 4px solid var(--primary-500);
+        }
+        
+        .process-step h4 {
+            color: var(--primary-700);
+            margin: 1rem 0 0.5rem;
+        }
+        
+        .color-palette {
+            display: flex;
+            margin: 2rem 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .color-item {
+            flex: 1;
+            padding: 2rem 1rem;
+            text-align: center;
+            color: white;
+        }
+        
+        .color-item:nth-child(1) { background: var(--primary-100); color: #333; }
+        .color-item:nth-child(2) { background: var(--primary-300); color: #333; }
+        .color-item:nth-child(3) { background: var(--primary-500); }
+        .color-item:nth-child(4) { background: var(--primary-700); }
+        .color-item:nth-child(5) { background: var(--primary-900); }
+        
+        .screens-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .screen-item {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .screen-item:hover {
+            transform: scale(1.02);
+        }
+        
+        .screen-item img {
+            width: 100%;
+            display: block;
+        }
+        
+        .dashboard-features {
+            background: var(--primary-50);
+            padding: 3rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+        }
+        
+        .feature-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .feature-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .feature-item h5 {
+            color: var(--primary-600);
+            margin-bottom: 0.5rem;
+        }
+        
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .metric-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            border-top: 4px solid var(--primary-500);
+        }
+        
+        .metric-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-500);
+            margin-bottom: 0.5rem;
+        }
+        
+        .back-to-portfolio {
+            text-align: center;
+            margin-top: 3rem;
+        }
+        
+        .testimonial-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            border-left: 4px solid var(--primary-500);
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            margin-top: 1rem;
+        }
+        
+        .testimonial-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 1rem;
+            background: var(--primary-500);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .btn {
+            background-color: var(--primary-500);
+            border-color: var(--primary-500);
+        }
+        
+        .btn:hover {
+            background-color: var(--primary-600);
+            border-color: var(--primary-600);
+        }
+        
+        .btn--stroke {
+            background-color: transparent;
+            color: var(--primary-500);
+            border-color: var(--primary-500);
+        }
+        
+        .btn--stroke:hover {
+            background-color: var(--primary-500);
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .case-study-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .case-study-section h2 {
+                font-size: 2rem;
+            }
+            
+            .color-palette {
+                flex-direction: column;
+            }
+            
+            .dashboard-features {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body id="top">
+    <div id="preloader">
+        <div id="loader" class="dots-fade">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <div id="page" class="s-pagewrap">
+        <header class="s-header">
+            <div class="row s-header__inner" style="border-radius: 10px;">
+                <div class="s-header__block">
+                    <div class="s-header__logo">
+                        <a class="logo" href="index.html">
+                            <img src="images/icons/logo.png" alt="Homepage">
+                        </a>
+                    </div>
+                    <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
+                </div>
+
+                <nav class="s-header__nav">    
+                    <ul class="s-header__menu-links">
+                        <li><a class="smoothscroll" href="index.html#intro">Intro</a></li>
+                        <li><a class="smoothscroll" href="index.html#about">About</a></li>
+                        <li><a class="smoothscroll" href="index.html#works">Works</a></li>
+                        <li><a class="smoothscroll" href="index.html#footer">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <section class="case-study-hero">
+            <div class="row">
+                <div class="column xl-12">
+                    <h1>Greatify Dashboard Design</h1>
+                    <p>Designing a clean, modern dashboard that simplifies insights, boosts productivity, and enhances user experience</p>
+                    <div class="s-intro__content-btns">
+                        <a href="#prototype" class="btn">View Prototype</a>
+                        <a href="index.html#works" class="btn btn--stroke">Back to Portfolio</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-study-content">
+            <div class="row">
+                <div class="column xl-12">
+                    <div class="case-study-section">
+                        <h2>Project Overview</h2>
+                        <p>Greatify needed a comprehensive dashboard redesign to help users better understand their data, improve workflow efficiency, and provide actionable insights. The goal was to create an intuitive interface that balances powerful functionality with clean, modern aesthetics.</p>
+                        
+                        <div class="feature-grid">
+                            <div class="feature-card">
+                                <h4>My Role</h4>
+                                <p>Lead UI/UX Designer, Information Architect, Interaction Designer</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4>Timeline</h4>
+                                <p>8 weeks (Discovery to High-Fidelity Prototype)</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4>Tools Used</h4>
+                                <p>Figma, Adobe XD, Illustrator, Miro for wireframing</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="case-study-section">
+                        <h2>The Challenge</h2>
+                        <p>The existing dashboard suffered from several critical issues that impacted user productivity and satisfaction:</p>
+                        
+                        <div class="feature-grid">
+                            <div class="feature-card">
+                                <h4>Information Overload</h4>
+                                <p>Users were overwhelmed with too much data presented without clear hierarchy or prioritization</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4>Poor Navigation</h4>
+                                <p>Complex menu structures made it difficult to find key features and reports</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4>Inconsistent UI</h4>
+                                <p>Lack of design system led to inconsistent components and confusing interactions</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <div class="case-study-section">
+                        <h2>User Research & Discovery</h2>
+                        <p>I conducted extensive research to understand user needs, pain points, and workflows:</p>
+                        
+                        <div class="feature-grid">
+                            <div class="feature-card">
+                                <h4>User Interviews</h4>
+                                <p>12 in-depth interviews with current users across different roles (admins, managers, analysts)</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4>Analytics Review</h4>
+                                <p>Analysis of usage patterns, feature adoption, and drop-off points in the current dashboard</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4>Competitive Analysis</h4>
+                                <p>Study of 8 competing dashboard solutions to identify best practices and opportunities</p>
+                            </div>
+                        </div>
+                        
+                        <h3>Key Research Findings</h3>
+                        <ul>
+                            <li>78% of users accessed the dashboard daily but spent excessive time finding information</li>
+                            <li>65% reported difficulty in understanding data visualizations</li>
+                            <li>82% wanted customizable widgets and layouts</li>
+                            <li>71% needed better filtering and search capabilities</li>
+                            <li>56% used mobile devices for quick dashboard checks</li>
+                        </ul>
+                    </div>
+
+                    <div class="case-study-section">
+                        <h2>Design Process</h2>
+                        
+                        <div class="design-process">
+                            <div class="process-step">
+                                <h4>1. Discovery</h4>
+                                <p>User research, competitive analysis, requirement gathering</p>
+                            </div>
+                            <div class="process-step">
+                                <h4>2. Information Architecture</h4>
+                                <p>Content organization, navigation structure, user flows</p>
+                            </div>
+                            <div class="process-step">
+                                <h4>3. Wireframing</h4>
+                                <p>Low-fidelity layouts, component structure, interaction patterns</p>
+                            </div>
+                            <div class="process-step">
+                                <h4>4. Visual Design</h4>
+                                <p>UI design, design system, high-fidelity mockups</p>
+                            </div>
+                            <div class="process-step">
+                                <h4>5. Prototyping & Testing</h4>
+                                <p>Interactive prototypes, user testing, iteration</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="case-study-section">
+                        <h2>Key Features & Solutions</h2>
+                        
+                        <div class="dashboard-features">
+                            <h3>Dashboard Overview</h3>
+                            <p>The main dashboard provides an at-a-glance view of key metrics with customizable widgets and intelligent data visualization.</p>
+                            
+                            <div class="feature-list">
+                                <div class="feature-item">
+                                    <h5>Smart Metrics Cards</h5>
+                                    <p>Interactive cards showing key performance indicators with trend indicators and quick actions</p>
+                                </div>
+                                <div class="feature-item">
+                                    <h5>Customizable Layout</h5>
+                                    <p>Drag-and-drop widget arrangement to match individual workflow preferences</p>
+                                </div>
+                                <div class="feature-item">
+                                    <h5>Advanced Filtering</h5>
+                                    <p>Multi-dimensional filtering with saved filter sets for quick access</p>
+                                </div>
+                                <div class="feature-item">
+                                    <h5>Real-time Updates</h5>
+                                    <p>Live data refresh with visual indicators for recent changes</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="dashboard-features">
+                            <h3>Analytics & Reporting</h3>
+                            <p>Comprehensive analytics section with advanced visualization and reporting capabilities.</p>
+                            
+                            <div class="feature-list">
+                                <div class="feature-item">
+                                    <h5>Interactive Charts</h5>
+                                    <p>Clickable charts with drill-down capabilities for detailed analysis</p>
+                                </div>
+                                <div class="feature-item">
+                                    <h5>Report Builder</h5>
+                                    <p>Drag-and-drop report creation with multiple visualization options</p>
+                                </div>
+                                <div class="feature-item">
+                                    <h5>Data Export</h5>
+                                    <p>Multiple export formats (PDF, Excel, CSV) with customizable templates</p>
+                                </div>
+                                <div class="feature-item">
+                                    <h5>Scheduled Reports</h5>
+                                    <p>Automated report generation and distribution on custom schedules</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="case-study-section">
+                        <h2>Visual Design System</h2>
+                        
+                        <h3>Color Palette</h3>
+                        <p>Using a monochromatic color scheme based on the primary green (#54B848) creates a cohesive, professional appearance while ensuring excellent accessibility and visual hierarchy.</p>
+                        
+                        <div class="color-palette">
+                            <div class="color-item">
+                                <p>Primary 100</p>
+                                <p>#dcf2dc</p>
+                            </div>
+                            <div class="color-item">
+                                <p>Primary 300</p>
+                                <p>#8fd38f</p>
+                            </div>
+                            <div class="color-item">
+                                <p>Primary 500</p>
+                                <p>#54b848</p>
+                            </div>
+                            <div class="color-item">
+                                <p>Primary 700</p>
+                                <p>#2e7a27</p>
+                            </div>
+                            <div class="color-item">
+                                <p>Primary 900</p>
+                                <p>#21501d</p>
+                            </div>
+                        </div>
+                        
+                        <h3>Typography</h3>
+                        <p>I used Inter as the primary font family for its excellent readability and modern appearance, perfectly suited for data-heavy interfaces.</p>
+                        
+                        
+                    </div>
+
+                    <div class="case-study-section">
+                        <h2 id="prototype">Interactive Prototype</h2>
+                        <p>The high-fidelity prototype demonstrates the complete user experience with interactive elements, transitions, and realistic data visualization.</p>
+                        
+                        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin: 2rem 0;">
+                            <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fh5l4cTWsCSw8ftsSV7c6Ql%2Fgreatify%3Fnode-id%3D146-10%26t%3DqKQRoUQgSbMGORxy-1" allowfullscreen></iframe>
+                        </div>
+                        
+                        <p><a href="https://www.figma.com/proto/h5l4cTWsCSw8ftsSV7c6Ql/greatify?node-id=146-10&t=qKQRoUQgSbMGORxy-1" class="btn" target="_blank">View Full Prototype on Figma</a></p>
+                    </div>
+
+                    <div class="case-study-section">
+                        <h2>Results & Impact</h2>
+                        <p>The redesigned Greatify dashboard delivered significant improvements across key metrics:</p>
+                        
+                        <div class="metrics-grid">
+                            <div class="metric-card">
+                                <div class="metric-value">42%</div>
+                                <p>Faster task completion</p>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-value">67%</div>
+                                <p>Reduction in support tickets</p>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-value">4.8/5</div>
+                                <p>User satisfaction score</p>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-value">89%</div>
+                                <p>Adoption rate of new features</p>
+                            </div>
+                        </div>
+                        
+                        <div class="testimonial-card">
+                            <p>"The new dashboard has completely transformed how our team interacts with data. The intuitive design and powerful features have significantly improved our decision-making process and saved us countless hours each week."</p>
+                            <div class="testimonial-author">
+                                <div class="testimonial-avatar">SP</div>
+                                <div>
+                                    <strong>Sarah Peterson</strong><br>
+                                    <span>Product Manager, Greatify</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="back-to-portfolio">
+                        <a href="index.html#works" class="btn btn--stroke">Back to Portfolio</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer id="footer" class="s-footer target-section">
+            <div class="row">
+                <div class="column lg-12">
+                    <div class="section-header light-on-dark">
+                        <h2 class="text-display-title">Get In Touch</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row s-footer__content">
+                <div class="column xl-6 md-12 s-footer__block s-footer__about">                    
+                    <p class="attention-getter">
+                        I'm a front-end developer and UI/UX designer.
+                        I create clean, responsive interfaces with a focus on user experience.
+                        Blending design and code, I bring digital products to life.
+                    </p>               
+                </div>
+
+                <div class="column xl-6 md-12 s-footer__block s-footer__site-links">
+                    <div class="row">
+                        <div class="column xl-4 lg-5 md-6 tab-12">
+                            <h5>Follow Me</h5>
+                            <ul class="link-list">
+                                <li><a href="https://www.facebook.com/profile.php?id=100010537668406">Facebook</a></li>
+                                <li><a href="https://x.com/AkileshHari?t=5FzqfRNs2aZdoVHPQVDwIQ&s=09">Twitter</a></li>
+                                <li><a href="https://www.instagram.com/akilesh_hari_ec/">Instagram</a></li>
+                                <li><a href="https://dribbble.com/akilesh_hari">Dribbble</a></li>
+                            </ul>
+                        </div>
+                        <div class="column xl-6 md-6 tab-12">
+                            <h5>Contact Me</h5>
+                            <ul class="link-list">
+                                <li><a href="mailto:akileshvj726@gmail.com">akileshvj726@gmail.com</a></li>
+                                <li><a href="tel:+919514142099">+91 95141 42099</a></li>
+                            </ul> 
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+
+            <div class="row s-footer__buttons">
+                <div class="column xl-6 tab-12">
+                    <a href="mailto:akileshvj726@gmail.com" class="btn btn--primary btn--large u-fullwidth">Message Me</a>
+                </div>
+                <div class="column xl-6 tab-12">                    
+                    <a href="images/Resume/UI_UX_Akilesh_Hariharan_Resume_Updated.pdf" class="btn btn--stroke btn--large u-fullwidth">Get My CV</a>
+                </div>
+            </div>
+            
+            <div class="row s-footer__bottom">
+                <div class="column xl-6 lg-12">
+                    <ul class="s-footer__social social-list">
+                        <li><a href="https://www.facebook.com/profile.php?id=100010537668406">Facebook</a></li>
+                        <li><a href="https://x.com/AkileshHari?t=5FzqfRNs2aZdoVHPQVDwIQ&s=09">Twitter</a></li>
+                        <li><a href="https://www.instagram.com/akilesh_hari_ec/">Instagram</a></li>
+                        <li><a href="https://dribbble.com/akilesh_hari">Dribbble</a></li>
+                    </ul> 
+                </div>
+                <div class="column xl-6 lg-12">
+                    <p class="ss-copyright">
+                        <span>© Copyright Akilesh_hari 2025</span> 
+                        <span>Design by <a href="">Akilesh_hariharan</a></span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="ss-go-top">
+                <a class="smoothscroll" title="Back to Top" href="#top">                 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M5.536 21.886a1.004 1.004 0 0 0 1.033-.064l13-9a1 1 0 0 0 0-1.644l-13-9A1 1 0 0 0 5 3v18a1 1 0 0 0 .536.886z"></path></svg>
+                </a>                                
+                <span>Back To Top</span>   
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

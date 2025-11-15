@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SouthCraft Handcrafting Website Case Study | Akilesh Portfolio</title>
+
+    <script>
+        document.documentElement.classList.remove('no-js');
+        document.documentElement.classList.add('js');
+    </script>
+
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <style>
+        /* Additional styles for the SouthCraft case study page */
+              .case-study-hero {
+            background: url('images/Uiux/southcraft.png') center/cover no-repeat;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+            /* color: white; */
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+
+        .case-study-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.8);
+}
+ 
+        
+        .case-study-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            opacity: 0.9;
+        }
+        
+        .case-study-hero p {
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
+        
+        .case-study-content {
+            padding: 80px 0;
+        }
+        
+        .case-study-section {
+            margin-bottom: 80px;
+        }
+        
+        .case-study-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #8B4513;
+        }
+        
+        .case-study-section h3 {
+            font-size: 1.75rem;
+            margin: 2rem 0 1rem;
+            color: #A0522D;
+        }
+        
+        .case-study-image {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin: 2rem 0;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .feature-card {
+            background: #f9f9f9;
+            padding: 2rem;
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+            border-left: 4px solid #8B4513;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-card h4 {
+            color: #8B4513;
+            margin-bottom: 1rem;
+        }
+        
+        .design-process {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 2rem 0;
+        }
+        
+        .process-step {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+            padding: 1.5rem;
+            margin: 0.5rem;
+            background: #FAF0E6;
+            border-radius: 12px;
+            border: 1px solid #DEB887;
+        }
+        
+        .process-step h4 {
+            color: #8B4513;
+            margin: 1rem 0 0.5rem;
+        }
+        
+        .color-palette {
+            display: flex;
+            margin: 2rem 0;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        .color-item {
+            flex: 1;
+            padding: 2rem 1rem;
+            text-align: center;
+            color: white;
+        }
+        
+        .color-item:nth-child(1) { background: #8B4513; }
+        .color-item:nth-child(2) { background: #A0522D; }
+        .color-item:nth-child(3) { background: #DEB887; color: #333; }
+        .color-item:nth-child(4) { background: #FAF0E6; color: #333; }
+        .color-item:nth-child(5) { background: #2F4F4F; }
+        
+        .screens-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .screen-item {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .screen-item:hover {
+            transform: scale(1.05);
+        }
+        
+        .screen-item img {
+            width: 100%;
+            display: block;
+        }
+        
+        .back-to-portfolio {
+            text-align: center;
+            margin-top: 3rem;
+        }
+        
+        .user-flow {
+            background: #FAF0E6;
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+        }
+        
+        .testimonial-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+            border-left: 4px solid #8B4513;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            margin-top: 1rem;
+        }
+        
+        .testimonial-author img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .case-study-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .case-study-section h2 {
+                font-size: 2rem;
+            }
+            
+            .color-palette {
+                flex-direction: column;
+            }
+            
+            .design-process {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body id="top">
+    <div id="preloader">
+        <div id="loader" class="dots-fade">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <div id="page" class="s-pagewrap">
+        <header class="s-header">
+            <div class="row s-header__inner" style="border-radius: 10px;">
+                <div class="s-header__block">
+                    <div class="s-header__logo">
+                        <a class="logo" href="index.html">
+                            <img src="images/icons/logo.png" alt="Homepage">
+                        </a>
+                    </div>
+                    <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
+                </div>
+
+                <nav class="s-header__nav">    
+                    <ul class="s-header__menu-links">
+                        <li><a class="smoothscroll" href="index.html#intro">Intro</a></li>
+                        <li><a class="smoothscroll" href="index.html#about">About</a></li>
+                        <li><a class="smoothscroll" href="index.html#works">Works</a></li>
+                        <li><a class="smoothscroll" href="index.html#footer">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <section class="case-study-hero">
+            <div class="row">
+                <div class="column xl-12">
+                    <h1>SouthCraft Handcrafting Website</h1>
+                    <p>Creating an authentic e-commerce platform for traditional South Indian handicrafts with modern user experience</p>
+                    <div class="s-intro__content-btns">
+                        <a href="#prototype" class="btn">View Prototype</a>
+                        <a href="index.html#works" class="btn btn--stroke">Back to Portfolio</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-study-content">
+            <div class="row">
+                <div class="column xl-12">
+                    <div class="case-study-section">
+                        <h2>Project Overview</h2>
+                        <p>SouthCraft is an e-commerce platform dedicated to preserving and promoting authentic South Indian handicrafts. The project aimed to create a digital marketplace that showcases the rich cultural heritage while providing a seamless shopping experience for customers worldwide.</p>
+                        
+                        <div class="feature-grid">
+                            <div class="feature-card">
+                                <h4>My Role</h4>
+                                <p>UI/UX Designer, Product Designer, User Researcher</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4>Timeline</h4>
+                                <p>8 weeks (Discovery to High-Fidelity Prototype)</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4>Tools Used</h4>
+                                <p>Figma, Adobe XD, Photoshop, Illustrator</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="case-study-section">
+                        <h2>The Challenge</h2>
+                        <p>Traditional handicraft businesses face significant challenges in the digital space:</p>
+                        <ul>
+                            <li>Limited online presence and digital marketing</li>
+                            <li>Difficulty showcasing product authenticity and craftsmanship</li>
+                            <li>Complex navigation and poor product discovery</li>
+                            <li>Lack of trust in online transactions</li>
+                            <li>Inadequate mobile shopping experience</li>
+                        </ul>
+                        
+                        <div class="testimonial-card">
+                            <p>"We have amazing products, but we struggle to reach customers who appreciate authentic handicrafts. Most e-commerce platforms don't showcase the story behind our crafts."</p>
+                            <div class="testimonial-author">
+                               
+                                <div style="font-size:18px;">
+                                    <strong>-Rajesh Kumar</strong>
+                                    <span>Traditional Wood Carver from Tamil Nadu</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="case-study-section">
+                        <h2>User Research & Discovery</h2>
+                        <p>I conducted comprehensive research to understand both artisans and customers:</p>
+                        
+                        <div class="feature-grid">
+                            <div class="feature-card">
+                                <h4>Target Audience</h4>
+                                <ul>
+                                    <li>Artisans & Craft Communities (Ages 25-65)</li>
+                                    <li>Cultural Enthusiasts (Ages 30-55)</li>
+                                    <li>Interior Designers & Collectors</li>
+                                    <li>Tourists & Cultural Explorers</li>
+                                </ul>
+                            </div>
+                            <div class="feature-card">
+                                <h4>Key Insights</h4>
+                                <ul>
+                                    <li>92% want to know the artisan's story</li>
+                                    <li>78% prefer high-quality product images</li>
+                                    <li>85% need detailed product descriptions</li>
+                                    <li>67% want secure payment options</li>
+                                    <li>73% shop on mobile devices</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <h3>User Personas</h3>
+                        <div class="feature-grid">
+                            <div class="feature-card">
+                                <h4>Priya, 35 - Interior Designer</h4>
+                                <p><strong>Goals:</strong> Find unique, authentic pieces for clients. Understand craftsmanship and materials.</p>
+                                <p><strong>Frustrations:</strong> Poor product images, lack of artisan information, difficult navigation.</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4>Arun, 42 - Cultural Collector</h4>
+                                <p><strong>Goals:</strong> Build collection of traditional crafts. Learn about cultural significance.</p>
+                                <p><strong>Frustrations:</strong> Inauthentic products, limited selection, poor customer service.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="case-study-section">
+                        <h2>Design Process</h2>
+                        
+                        <div class="design-process">
+                            <div class="process-step">
+                                <h4>1. Research</h4>
+                                <p>User interviews, market analysis, competitor research</p>
+                            </div>
+                            <div class="process-step">
+                                <h4>2. Strategy</h4>
+                                <p>Information architecture, user flows, content strategy</p>
+                            </div>
+                            <div class="process-step">
+                                <h4>3. Design</h4>
+                                <p>Wireframing, prototyping, visual design</p>
+                            </div>
+                            <div class="process-step">
+                                <h4>4. Testing</h4>
+                                <p>Usability testing, iteration, refinement</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="case-study-section">
+                        <h2>Key Features</h2>
+                        
+                        <div class="feature-grid">
+                            <div class="feature-card">
+                                <h4>Artisan Stories</h4>
+                                <p>Dedicated sections showcasing artisan backgrounds, techniques, and cultural significance of each craft.</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4>Advanced Filtering</h4>
+                                <p>Filter by region, craft type, materials, price range, and artisan to find perfect products.</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4>High-Quality Visuals</h4>
+                                <p>360° product views, detailed close-ups, and lifestyle images to showcase craftsmanship.</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4>Secure Checkout</h4>
+                                <p>Multiple payment options, SSL encryption, and transparent return policies.</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4>Mobile-First Design</h4>
+                                <p>Responsive design optimized for mobile shopping with intuitive touch interactions.</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4>Cultural Blog</h4>
+                                <p>Educational content about South Indian crafts, traditions, and cultural significance.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="case-study-section">
+                        <h2>User Flow & Information Architecture</h2>
+                        
+                        <div class="user-flow">
+                            <h4>Primary User Journey</h4>
+                            <p>Homepage → Product Discovery → Product Details → Artisan Story → Add to Cart → Secure Checkout → Order Confirmation</p>
+                            
+                            <h4>Key User Flows</h4>
+                            <ul>
+                                <li><strong>Product Discovery:</strong> Browse by category → Filter results → View product details</li>
+                                <li><strong>Artisan Connection:</strong> Select product → Read artisan story → Learn about craft → Purchase</li>
+                                <li><strong>Mobile Shopping:</strong> Responsive browsing → Easy navigation → Quick checkout</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="case-study-section">
+                        <h2>Visual Design</h2>
+                        
+                        <h3>Brand Identity & Color Palette</h3>
+                        <p>The color palette reflects the earthy, natural tones of traditional South Indian crafts while maintaining modern elegance.</p>
+                        
+                        <div class="color-palette">
+                            <div class="color-item">
+                                <p>Primary Brown</p>
+                                <p>#8B4513</p>
+                            </div>
+                            <div class="color-item">
+                                <p>Secondary Brown</p>
+                                <p>#A0522D</p>
+                            </div>
+                            <div class="color-item">
+                                <p>Accent Tan</p>
+                                <p>#DEB887</p>
+                            </div>
+                            <div class="color-item">
+                                <p>Background</p>
+                                <p>#FAF0E6</p>
+                            </div>
+                            <div class="color-item">
+                                <p>Text</p>
+                                <p>#2F4F4F</p>
+                            </div>
+                        </div>
+                        
+                        <h3>Typography</h3>
+                        <p>I used a combination of Playfair Display for headings (elegant, traditional feel) and Lato for body text (modern, readable) to balance heritage with contemporary design.</p>
+                        
+                        <h3>UI Screens & Key Features</h3>
+                        <div class="screens-grid">
+                            <div class="screen-item">
+                                <img src="images/southcraaft/1.png" alt="Homepage Design">
+                                <div style="padding: 1rem; text-align: center;">
+                                    <strong>Homepage</strong>
+                                    <p>Featured artisans and crafts</p>
+                                </div>
+                            </div>
+                            <div class="screen-item">
+                                <img src="images/southcraaft/2.png" alt="Product Listing">
+                                <div style="padding: 1rem; text-align: center;">
+                                    <strong>Product Catalog</strong>
+                                    <p>Advanced filtering options</p>
+                                </div>
+                            </div>
+                            <div class="screen-item">
+                                <img src="images/southcraaft/3.png" alt="Product Details">
+                                <div style="padding: 1rem; text-align: center;">
+                                    <strong>Product Details</strong>
+                                    <p>Artisan story integration</p>
+                                </div>
+                            </div>
+                            <div class="screen-item">
+                                <img src="images/southcraaft/4.png" alt="Shopping Cart">
+                                <div style="padding: 1rem; text-align: center;">
+                                    <strong>Shopping Cart</strong>
+                                    <p>Seamless checkout process</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="case-study-section">
+                        <h2 id="prototype">Interactive Prototype</h2>
+                        <p>The high-fidelity prototype demonstrates the complete user journey from discovering traditional crafts to completing a purchase while learning about the artisans and their techniques.</p>
+                        
+                        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin: 2rem 0;">
+                            <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FRGZmzr92Knc2ebiWBkad2X%2FSouth-Craft%3Fnode-id%3D6-3%26t%3Dj0Ce0GHrEjALHgZG-1" allowfullscreen></iframe>
+                        </div>
+                        
+                        <p><a href="https://www.figma.com/proto/RGZmzr92Knc2ebiWBkad2X/South-Craft?node-id=6-3&t=j0Ce0GHrEjALHgZG-1" class="btn" target="_blank">View Full Prototype on Figma</a></p>
+                    </div>
+
+                    <div class="case-study-section">
+                        <h2>Results & Impact</h2>
+                        <p>The SouthCraft website redesign delivered significant improvements in user experience and business metrics:</p>
+                        
+                        <div class="feature-grid">
+                            <div class="feature-card">
+                                <h4>Conversion Rate</h4>
+                                <p>Increased by 45% compared to previous platform</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4>User Engagement</h4>
+                                <p>Average session duration increased by 3.2 minutes</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4>Mobile Sales</h4>
+                                <p>68% of total sales now come from mobile devices</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4>Customer Satisfaction</h4>
+                                <p>4.8/5 rating based on post-purchase surveys</p>
+                            </div>
+                        </div>
+                        
+                        <div class="testimonial-card">
+                            <p>"The new SouthCraft website has completely transformed our business. We're now reaching customers globally who truly appreciate our craftsmanship. The artisan stories feature has been particularly impactful in building trust and connection."</p>
+                            <div class="testimonial-author">
+                               
+                                <div style="font-size: 18px;">
+                                    <strong>Meena Sharma</strong>
+                                    <span>Founder, SouthCraft Handicrafts</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="back-to-portfolio">
+                        <a href="index.html#works" class="btn btn--stroke">Back to Portfolio</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer id="footer" class="s-footer target-section">
+            <div class="row">
+                <div class="column lg-12">
+                    <div class="section-header light-on-dark">
+                        <h2 class="text-display-title">Get In Touch</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row s-footer__content">
+                <div class="column xl-6 md-12 s-footer__block s-footer__about">                    
+                    <p class="attention-getter">
+                        I'm a front-end developer and UI/UX designer.
+                        I create clean, responsive interfaces with a focus on user experience.
+                        Blending design and code, I bring digital products to life.
+                    </p>               
+                </div>
+
+                <div class="column xl-6 md-12 s-footer__block s-footer__site-links">
+                    <div class="row">
+                        <div class="column xl-4 lg-5 md-6 tab-12">
+                            <h5>Follow Me</h5>
+                            <ul class="link-list">
+                                <li><a href="https://www.facebook.com/profile.php?id=100010537668406">Facebook</a></li>
+                                <li><a href="https://x.com/AkileshHari?t=5FzqfRNs2aZdoVHPQVDwIQ&s=09">Twitter</a></li>
+                                <li><a href="https://www.instagram.com/akilesh_hari_ec/">Instagram</a></li>
+                                <li><a href="https://dribbble.com/akilesh_hari">Dribbble</a></li>
+                            </ul>
+                        </div>
+                        <div class="column xl-6 md-6 tab-12">
+                            <h5>Contact Me</h5>
+                            <ul class="link-list">
+                                <li><a href="mailto:akileshvj726@gmail.com">akileshvj726@gmail.com</a></li>
+                                <li><a href="tel:+919514142099">+91 95141 42099</a></li>
+                            </ul> 
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+
+            <div class="row s-footer__buttons">
+                <div class="column xl-6 tab-12">
+                    <a href="mailto:akileshvj726@gmail.com" class="btn btn--primary btn--large u-fullwidth">Message Me</a>
+                </div>
+                <div class="column xl-6 tab-12">                    
+                    <a href="images/Resume/UI_UX_Akilesh_Hariharan_Resume_Updated.pdf" class="btn btn--stroke btn--large u-fullwidth">Get My CV</a>
+                </div>
+            </div>
+            
+            <div class="row s-footer__bottom">
+                <div class="column xl-6 lg-12">
+                    <ul class="s-footer__social social-list">
+                        <li><a href="https://www.facebook.com/profile.php?id=100010537668406">Facebook</a></li>
+                        <li><a href="https://x.com/AkileshHari?t=5FzqfRNs2aZdoVHPQVDwIQ&s=09">Twitter</a></li>
+                        <li><a href="https://www.instagram.com/akilesh_hari_ec/">Instagram</a></li>
+                        <li><a href="https://dribbble.com/akilesh_hari">Dribbble</a></li>
+                    </ul> 
+                </div>
+                <div class="column xl-6 lg-12">
+                    <p class="ss-copyright">
+                        <span>© Copyright Akilesh_hari 2025</span> 
+                        <span>Design by <a href="">Akilesh_hariharan</a></span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="ss-go-top">
+                <a class="smoothscroll" title="Back to Top" href="#top">                 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M5.536 21.886a1.004 1.004 0 0 0 1.033-.064l13-9a1 1 0 0 0 0-1.644l-13-9A1 1 0 0 0 5 3v18a1 1 0 0 0 .536.886z"></path></svg>
+                </a>                                
+                <span>Back To Top</span>   
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

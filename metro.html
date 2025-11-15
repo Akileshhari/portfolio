@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chennai Metro App Case Study | Akilesh Portfolio</title>
+
+    <script>
+        document.documentElement.classList.remove('no-js');
+        document.documentElement.classList.add('js');
+    </script>
+
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <style>
+        /* Additional styles for the case study page */
+        .case-study-hero {
+            background: url('images/Uiux/Metro.png') center/cover no-repeat;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+            /* color: white; */
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+
+        .case-study-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.8);
+}
+        
+        .case-study-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+     opacity: 0.9;
+
+        }
+        
+        .case-study-hero p {
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+      
+
+        }
+        
+        .case-study-content {
+            padding: 40px 0;
+        }
+        
+        .case-study-section {
+            margin-bottom: 40px;
+        }
+        
+        .case-study-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #0055A5;
+        }
+        
+        .case-study-section h3 {
+            font-size: 1.75rem;
+            margin: 2rem 0 1rem;
+            color: #003366;
+        }
+        
+        .case-study-image {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin: 2rem 0;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .feature-card {
+            background: #f9f9f9;
+            padding: 2rem;
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-card h4 {
+            color: #0055A5;
+            margin-bottom: 1rem;
+        }
+        
+        .design-process {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 2rem 0;
+        }
+        
+        .process-step {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+            padding: 1.5rem;
+            margin: 0.5rem;
+            background: #f0f7ff;
+            border-radius: 12px;
+        }
+        
+        .process-step h4 {
+            color: #0055A5;
+            margin: 1rem 0 0.5rem;
+        }
+        
+        .color-palette {
+            display: flex;
+            margin: 2rem 0;
+        }
+        
+        .color-item {
+            flex: 1;
+            padding: 2rem 1rem;
+            text-align: center;
+            color: white;
+        }
+        
+        .color-item:nth-child(1) { background: #0055A5; }
+        .color-item:nth-child(2) { background: #003366; }
+        .color-item:nth-child(3) { background: #00A0E9; }
+        .color-item:nth-child(4) { background: #F5F5F5; color: #333; }
+        .color-item:nth-child(5) { background: #333333; }
+        
+        .screens-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .screen-item {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .screen-item img {
+            width: 100%;
+            display: block;
+        }
+        
+        .back-to-portfolio {
+            text-align: center;
+            margin-top: 3rem;
+        }
+        
+        @media (max-width: 768px) {
+            .case-study-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .case-study-section h2 {
+                font-size: 2rem;
+            }
+            
+            .color-palette {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body id="top">
+    <div id="preloader">
+        <div id="loader" class="dots-fade">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <div id="page" class="s-pagewrap">
+        <header class="s-header">
+            <div class="row s-header__inner" style="border-radius: 10px;">
+                <div class="s-header__block">
+                    <div class="s-header__logo">
+                        <a class="logo" href="index.html">
+                            <img src="images/icons/logo.png" alt="Homepage">
+                        </a>
+                    </div>
+                    <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
+                </div>
+
+                <nav class="s-header__nav">    
+                    <ul class="s-header__menu-links">
+                        <li><a class="smoothscroll" href="index.html#intro">Intro</a></li>
+                        <li><a class="smoothscroll" href="index.html#about">About</a></li>
+                        <li><a class="smoothscroll" href="index.html#works">Works</a></li>
+                        <li><a class="smoothscroll" href="index.html#footer">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <section class="case-study-hero">
+            <div class="row">
+                <div class="column xl-12">
+                    <h1>Chennai Metro Application</h1>
+                    <p>Redesigning the Chennai Metro app for seamless travel planning, easy booking, and real-time train tracking</p>
+                    <div class="s-intro__content-btns">
+                        <a href="#prototype" class="btn">View Prototype</a>
+                        <a href="index.html#works" class="btn btn--stroke">Back to Portfolio</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-study-content">
+            <div class="row">
+                <div class="column xl-12">
+                    <div class="case-study-section">
+                        <h2>Project Overview</h2>
+                        <p>The Chennai Metro application needed a complete redesign to improve user experience, simplify the booking process, and provide real-time information about train schedules and locations. The goal was to create an intuitive interface that would make metro travel more accessible and convenient for both regular commuters and occasional travelers.</p>
+                        
+                        <div class="feature-grid">
+                            <div class="feature-card">
+                                <h4>My Role</h4>
+                                <p>UI/UX Designer, User Researcher, Prototyper</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4>Timeline</h4>
+                                <p>6 weeks (Research to High-Fidelity Prototype)</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4>Tools Used</h4>
+                                <p>Figma, Adobe XD, Photoshop, Illustrator</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="case-study-section">
+                        <h2>The Challenge</h2>
+                        <p>The existing Chennai Metro app had several usability issues:</p>
+                        <ul>
+                            <li>Complex navigation and booking process</li>
+                            <li>Lack of real-time train information</li>
+                            <li>No GPS tracking for train locations</li>
+                            <li>Poor visual design and inconsistent UI elements</li>
+                            <li>Limited payment options</li>
+                        </ul>
+                        
+                        <!-- <img src="images/metro/old-app.jpg" alt="Old Chennai Metro App" class="case-study-image"> -->
+                    </div>
+
+                    <div class="case-study-section">
+                        <h2>User Research</h2>
+                        <p>I conducted interviews with 15 regular metro users and surveyed 50 occasional travelers to understand their pain points and needs:</p>
+                        
+                        <div class="feature-grid">
+                            <div class="feature-card">
+                                <h4>Key Findings</h4>
+                                <ul>
+                                    <li>85% wanted real-time train tracking</li>
+                                    <li>72% found booking tickets confusing</li>
+                                    <li>68% wanted fare information before booking</li>
+                                    <li>63% preferred digital tickets over physical ones</li>
+                                    <li>58% wanted notifications for delays</li>
+                                </ul>
+                            </div>
+                            <div class="feature-card">
+                                <h4>User Personas</h4>
+                                <p>Based on research, I created two primary user personas:</p>
+                                <ul>
+                                    <li><strong>Rahul</strong> (28, IT Professional): Daily commuter who values efficiency and real-time updates</li>
+                                    <li><strong>Priya</strong> (45, Teacher): Occasional traveler who needs clear guidance and simple booking</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="case-study-section">
+                        <h2>Design Process</h2>
+                        
+                        <div class="design-process">
+                            <div class="process-step">
+                                <h4>1. Research</h4>
+                                <p>User interviews, surveys, competitive analysis</p>
+                            </div>
+                            <div class="process-step">
+                                <h4>2. Ideation</h4>
+                                <p>Brainstorming, user flows, information architecture</p>
+                            </div>
+                            <div class="process-step">
+                                <h4>3. Wireframing</h4>
+                                <p>Low-fidelity sketches and digital wireframes</p>
+                            </div>
+                            <div class="process-step">
+                                <h4>4. Prototyping</h4>
+                                <p>Interactive prototypes for user testing</p>
+                            </div>
+                            <div class="process-step">
+                                <h4>5. Visual Design</h4>
+                                <p>High-fidelity mockups with branding</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="case-study-section">
+                        <h2>Key Features</h2>
+                        
+                        <div class="feature-grid">
+                            <div class="feature-card">
+                                <h4>Easy Booking</h4>
+                                <p>Streamlined ticket booking process with clear station selection, fare calculation, and multiple payment options.</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4>Train Timing</h4>
+                                <p>Real-time schedule information with next train arrivals and platform details.</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4>GPS Tracking</h4>
+                                <p>Live tracking of train locations with estimated arrival times at each station.</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4>Route Planning</h4>
+                                <p>Smart route suggestions with transfer information and travel time estimates.</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4>Digital Tickets</h4>
+                                <p>QR code-based digital tickets that can be scanned at entry gates.</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4>Notifications</h4>
+                                <p>Alerts for delays, platform changes, and service disruptions.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="case-study-section">
+                        <h2>Visual Design</h2>
+                        
+                        <h3>Color Palette</h3>
+                        <div class="color-palette">
+                            <div class="color-item">
+                                <p>Primary Blue</p>
+                                <p>#0055A5</p>
+                            </div>
+                            <div class="color-item">
+                                <p>Dark Blue</p>
+                                <p>#003366</p>
+                            </div>
+                            <div class="color-item">
+                                <p>Accent Blue</p>
+                                <p>#00A0E9</p>
+                            </div>
+                            <div class="color-item">
+                                <p>Background</p>
+                                <p>#F5F5F5</p>
+                            </div>
+                            <div class="color-item">
+                                <p>Text</p>
+                                <p>#333333</p>
+                            </div>
+                        </div>
+                        
+                        <h3>Typography</h3>
+                        <p>I used Poppins as the primary font family for its modern appearance and excellent readability on mobile screens.</p>
+                        
+                        <h3>UI Screens</h3>
+                        <div class="screens-grid">
+                            <div class="screen-item">
+                                <img src="images/metro/1.png" alt="Home Screen">
+                            </div>
+                            <div class="screen-item">
+                                <img src="images/metro/2.png" alt="Booking Screen">
+                            </div>
+                            <div class="screen-item">
+                                <img src="images/metro/3.png" alt="Tracking Screen">
+                            </div>
+                            <div class="screen-item">
+                                <img src="images/metro/1.png" alt="Ticket Screen">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="case-study-section">
+                        <h2 id="prototype">Interactive Prototype</h2>
+                        <p>The high-fidelity prototype demonstrates the complete user flow from route planning to ticket purchase and real-time tracking.</p>
+                        
+                        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin: 2rem 0;">
+                            <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FzR6kfOY85VEyBNUS1p2D9M%2FMetro%3Fnode-id%3D0-1%26t%3DuiKjZUEb7lN9wAUY-1" allowfullscreen></iframe>
+                        </div>
+                        
+                        <p><a href="https://www.figma.com/proto/zR6kfOY85VEyBNUS1p2D9M/Metro?node-id=0-1&t=uiKjZUEb7lN9wAUY-1" class="btn" target="_blank">View Full Prototype on Figma</a></p>
+                    </div>
+
+                    <div class="case-study-section">
+                        <h2>Results & Impact</h2>
+                        <p>After implementing the redesigned interface in user testing:</p>
+                        
+                        <div class="feature-grid">
+                            <div class="feature-card">
+                                <h4>Booking Time</h4>
+                                <p>Reduced from 2.5 minutes to 45 seconds</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4>User Satisfaction</h4>
+                                <p>Increased from 3.2/5 to 4.7/5</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4>Error Rate</h4>
+                                <p>Decreased by 78% during ticket purchase</p>
+                            </div>
+                        </div>
+                        
+                        <p>The redesigned Chennai Metro application successfully addressed user pain points and created a more intuitive, efficient experience for metro travelers in Chennai.</p>
+                    </div>
+
+                    <div class="back-to-portfolio">
+                        <a href="index.html#works" class="btn btn--stroke">Back to Portfolio</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer id="footer" class="s-footer target-section">
+            <div class="row">
+                <div class="column lg-12">
+                    <div class="section-header light-on-dark">
+                        <h2 class="text-display-title">Get In Touch</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row s-footer__content">
+                <div class="column xl-6 md-12 s-footer__block s-footer__about">                    
+                    <p class="attention-getter">
+                        I'm a front-end developer and UI/UX designer.
+                        I create clean, responsive interfaces with a focus on user experience.
+                        Blending design and code, I bring digital products to life.
+                    </p>               
+                </div>
+
+                <div class="column xl-6 md-12 s-footer__block s-footer__site-links">
+                    <div class="row">
+                        <div class="column xl-4 lg-5 md-6 tab-12">
+                            <h5>Follow Me</h5>
+                            <ul class="link-list">
+                                <li><a href="https://www.facebook.com/profile.php?id=100010537668406">Facebook</a></li>
+                                <li><a href="https://x.com/AkileshHari?t=5FzqfRNs2aZdoVHPQVDwIQ&s=09">Twitter</a></li>
+                                <li><a href="https://www.instagram.com/akilesh_hari_ec/">Instagram</a></li>
+                                <li><a href="https://dribbble.com/akilesh_hari">Dribbble</a></li>
+                            </ul>
+                        </div>
+                        <div class="column xl-6 md-6 tab-12">
+                            <h5>Contact Me</h5>
+                            <ul class="link-list">
+                                <li><a href="mailto:akileshvj726@gmail.com">akileshvj726@gmail.com</a></li>
+                                <li><a href="tel:+919514142099">+91 95141 42099</a></li>
+                            </ul> 
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+
+            <div class="row s-footer__buttons">
+                <div class="column xl-6 tab-12">
+                    <a href="mailto:akileshvj726@gmail.com" class="btn btn--primary btn--large u-fullwidth">Message Me</a>
+                </div>
+                <div class="column xl-6 tab-12">                    
+                    <a href="images/Resume/UI_UX_Akilesh_Hariharan_Resume_Updated.pdf" class="btn btn--stroke btn--large u-fullwidth">Get My CV</a>
+                </div>
+            </div>
+            
+            <div class="row s-footer__bottom">
+                <div class="column xl-6 lg-12">
+                    <ul class="s-footer__social social-list">
+                        <li><a href="https://www.facebook.com/profile.php?id=100010537668406">Facebook</a></li>
+                        <li><a href="https://x.com/AkileshHari?t=5FzqfRNs2aZdoVHPQVDwIQ&s=09">Twitter</a></li>
+                        <li><a href="https://www.instagram.com/akilesh_hari_ec/">Instagram</a></li>
+                        <li><a href="https://dribbble.com/akilesh_hari">Dribbble</a></li>
+                    </ul> 
+                </div>
+                <div class="column xl-6 lg-12">
+                    <p class="ss-copyright">
+                        <span>© Copyright Akilesh_hari 2025</span> 
+                        <span>Design by <a href="">Akilesh_hariharan</a></span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="ss-go-top">
+                <a class="smoothscroll" title="Back to Top" href="#top">                 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M5.536 21.886a1.004 1.004 0 0 0 1.033-.064l13-9a1 1 0 0 0 0-1.644l-13-9A1 1 0 0 0 5 3v18a1 1 0 0 0 .536.886z"></path></svg>
+                </a>                                
+                <span>Back To Top</span>   
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

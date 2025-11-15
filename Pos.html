@@ -85,194 +85,154 @@
         </header> <!-- end s-header -->
 
 
-        <style>
-  .banner {
-    width: 100%;
-    height: 380px;
-    background: url('images/Uiux/Dineloop-COVER-IMAGE.png') center/cover no-repeat;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+<style>
+    /* POS Inventory Management UI/UX Case Study - Separate CSS File */
 
-  .banner::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(255, 255, 255, 0.8);
-  }
+/* General Layout */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+  color: #141414;
+}
 
-  .banner-content {
-    position: relative;
-    color: #fff;
-    text-align: center;
-    max-width: 700px;
-    padding: 20px;
-  }
+/* Banner */
+.banner {
+  width: 100%;
+  height: 380px;
+  background: url('images/Uiux/Pos.png') center/cover no-repeat;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .banner-content h1 {
-    font-size: 30px;
-    margin-bottom: 10px;
-    color: #141414;
+.banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.8);
+}
 
-  }
+.banner-content {
+  position: relative;
+  text-align: center;
+  max-width: 700px;
+  padding: 20px;
+}
 
-  .banner-content p {
-    font-size: 16px;
-    margin-bottom: 20px;
-    opacity: 0.7;
-    color: #141414;
+.banner-content h1 {
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: #141414;
+}
 
-  }
+.banner-content p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  opacity: 0.7;
+  color: #141414;
+}
 
-  .banner-btn {
-    display: inline-block;
-    padding: 12px 28px;
-    background: #ff5a5f;
-    color: #fff;
-    font-weight: bold;
-    border-radius: 6px;
-    text-decoration: none;
-    transition: 0.3s;
-  }
+/* Case Study Section */
+.case-study {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
 
-  .banner-btn:hover {
-    background: #ff383d;
-  }
+.cs-block {
+  margin-bottom: 30px;
+  padding: 20px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  background: #fafafa;
+}
 
-  .case-study {
-    max-width: 900px;
-    margin: 60px auto;
-    padding: 0 20px;
-    font-family: Arial, sans-serif;
-  }
+.cs-block h3 {
+  margin-top: 0;
+  color: #171717;
+}
 
-  .case-study h2 {
-    text-align: center;
-    font-size: 32px;
-    margin-bottom: 10px;
-  }
+.cs-block p {
+  opacity: 0.7;
+  font-size: 16px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
 
-  .case-study .subtitle {
-    text-align: center;
-    color: #666;
-    margin-bottom: 30px;
-    font-size: 16px;
-  }
+.cs-block ul {
+  padding-left: 40px;
+  opacity: 0.7;
+  font-size: 16px;
+}
 
-  .cs-block {
-    margin-bottom: 30px;
-    padding: 20px;
-    border: 1px solid #eee;
-    border-radius: 10px;
-    background: #fafafa;
-  }
+.cs-block ul li {
+  margin-bottom: 6px;
+}
 
-  .cs-block h3 {
-    margin-top: 0;
-    color: #171717;
-  }
-
-   .cs-block p {
-opacity: 0.7;
-font-size: 16px;
- padding-left: 20px;padding-right: 20px;
-
-  }
-
-  .cs-block ul {
-    padding-left: 20px;
-    opacity: 0.7;
-font-size: 16px;
-
-  }
-
-  .cs-block .child-block{
-    padding-left: 20px;padding-right: 20px;
-  }
-
-  .cs-block ul li {
-    margin-bottom: 6px;
-  }
+.child-block {
+  padding-left: 20px;
+  padding-right: 20px;
+}
 </style>
 
-
-
-
-        <!-- BANNER SECTION -->
+<!-- BANNER SECTION -->
 <section class="banner">
   <div class="banner-content">
-    <h1>Case Study: Dine Loop Food Delivery Application</h1>
-    <p>A modern food delivery experience with cashback, instant refund & map tracking.</p>
-
+    <h1>Case Study: POS Inventory Management System</h1>
+    <p>A simplified POS system with real-time stock insights, intuitive dashboards, and an efficient landing experience.</p>
   </div>
 </section>
-
-
 
 <!-- CASE STUDY SECTION -->
 <section id="case-study" class="case-study">
 
   <div class="cs-block">
     <h3>1. Overview</h3>
-    <p >
-      Dine Loop is a modern food delivery application built to elevate the user’s ordering experience.
-It focuses on speed, transparency, and reward-based engagement — solving major gaps commonly seen in traditional delivery apps.
-    </p>
-
-    <P>The app introduces features like instant cashback, wallet-based instant refunds, order reward games, and map tracking for small restaurants, making food ordering more interactive and customer-centric.</P>
+    <p>The POS Inventory Management System helps small and medium businesses manage stock effortlessly. The UI/UX focuses on clarity, ease of use, and real-time visibility of products and sales.</p>
+    <p>I designed the landing page and dashboard screens to simplify complex data into visually understandable components for quick decision-making.</p>
   </div>
 
   <div class="cs-block">
     <h3>2. Problem Statement</h3>
     <div class="child-block">
-<p><b>Customer Pain Points</b></p>
-    <ul >
-      <li>Refunds take 2–5 days to reflect in the bank.</li>
-      <li>Customer engagement is low after the order is placed.</li>
-      <li>No reward system to motivate repeated ordering.</li>
-      <li>Difficult to trust delivery timings without proper tracking.</li>
-    </ul>
-    <p><b>Restaurant Pain Points</b></p>
-    <ul >
-      <li>Small restaurants don’t have access to fleet-level tracking tools.</li>
-      <li>They struggle to update status or rider movement.</li>
-      <li>Limited ways to boost repeat orders and customer loyalty.</li>
-    </ul>
+      <p><b>Business Challenges</b></p>
+      <ul>
+        <li>Difficulty tracking product availability in real time.</li>
+        <li>Unorganized dashboards causing delays in decision-making.</li>
+        <li>Lack of a clean interface for managing sales and stock together.</li>
+        <li>Confusing workflows for employees with limited technical experience.</li>
+      </ul>
     </div>
-    
   </div>
 
   <div class="cs-block">
     <h3>3. Proposed Solution</h3>
     <div class="child-block">
-    <p >Dine Loop solves these problems by introducing:</p>
-    <ul >
-      <li><strong>Instant Cashback:</strong> Earned immediately after every order.</li>
-      <li><strong>Instant Refunds:</strong> Canceled orders return money instantly to wallet.</li>
-      <li><strong>Order Game:</strong> Spin-to-win or scratch card to earn bonus rewards.</li>
-      <li><strong>Map Tracking:</strong> Small restaurants get simple rider tracking.</li>
-      <li><strong>Repeat Order Boost:</strong> Extra cashback for repeated dishes.</li>
-    </ul>
-  </div>
+      <p>I created a minimal, intuitive UI that includes:</p>
+      <ul>
+        <li><strong>Clean Dashboard:</strong> Quick overview of stock levels, low-inventory alerts, and daily sales summary.</li>
+        <li><strong>Landing Page:</strong> A simple interface guiding users to important actions.</li>
+        <li><strong>Simplified Navigation:</strong> Easy access to products, updates, categories, and reports.</li>
+        <li><strong>Real-Time Insights:</strong> Improved visibility for better planning.</li>
+      </ul>
+    </div>
   </div>
 
   <div class="cs-block">
     <h3>4. Impact</h3>
     <div class="child-block">
- <ul >
-      <li>Boosted user engagement through gamification.</li>
-      <li>Faster refunds increased user trust.</li>
-      <li>Small restaurants gained transparency and digital capability.</li>
-      <li>Significant increase in repeat ordering frequency.</li>
-    </ul>
+      <ul>
+        <li>Faster inventory checks and updates.</li>
+        <li>Better transparency reduces stock shortages.</li>
+        <li>Improved efficiency with a structured dashboard.</li>
+        <li>Minimal training required for new employees.</li>
+      </ul>
     </div>
-   
   </div>
 
 </section>
-
 
 
 

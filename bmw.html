@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Business Management World Case Study | Akilesh Portfolio</title>
+
+    <script>
+        document.documentElement.classList.remove('no-js');
+        document.documentElement.classList.add('js');
+    </script>
+
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <style>
+        /* Monochromatic Purple Color Scheme - Applied only to sections */
+        :root {
+            --primary-purple: #8C377E;
+            --dark-purple: #6C295F;
+            --light-purple: #AC459B;
+            --pale-purple: #F5EAF3;
+            --accent-purple: #B55AA8;
+        }
+        
+        /* Purple sections only */
+          .case-study-hero {
+            background: url('images/Uiux/BMW-Design.png') center/cover no-repeat;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+            /* color: white; */
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+
+        .case-study-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.95);
+}
+
+        
+        .case-study-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            position: relative;
+            color: #6C295F;
+        }
+        
+        .case-study-hero p {
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+            position: relative;
+        }
+        
+        .case-study-content {
+            padding: 80px 0;
+            background: var(--pale-purple);
+        }
+        
+        .case-study-section {
+            margin-bottom: 80px;
+            background: white;
+            padding: 3rem;
+            border-radius: 16px;
+            box-shadow: 0 5px 20px rgba(140, 55, 126, 0.1);
+        }
+        
+        .case-study-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--primary-purple);
+            position: relative;
+            padding-bottom: 1rem;
+        }
+        
+        .case-study-section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--primary-purple);
+            border-radius: 2px;
+        }
+        
+        .case-study-section h3 {
+            font-size: 1.75rem;
+            margin: 2rem 0 1rem;
+            color: var(--dark-purple);
+        }
+        
+        .case-study-image {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(140, 55, 126, 0.15);
+            margin: 2rem 0;
+            border: 1px solid var(--pale-purple);
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .feature-card {
+            background: var(--pale-purple);
+            padding: 2rem;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--primary-purple);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(140, 55, 126, 0.15);
+            border-color: var(--accent-purple);
+        }
+        
+        .feature-card h4 {
+            color: var(--primary-purple);
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+        
+        .design-process {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 2rem 0;
+        }
+        
+        .process-step {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+            padding: 2rem 1rem;
+            margin: 0.5rem;
+            background: var(--pale-purple);
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+        
+        .process-step:hover {
+            transform: translateY(-3px);
+        }
+        
+        .process-step::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 40px;
+            background: var(--primary-purple);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .process-step:nth-child(1)::before { content: '1'; }
+        .process-step:nth-child(2)::before { content: '2'; }
+        .process-step:nth-child(3)::before { content: '3'; }
+        .process-step:nth-child(4)::before { content: '4'; }
+        .process-step:nth-child(5)::before { content: '5'; }
+        
+        .process-step h4 {
+            color: var(--primary-purple);
+            margin: 2.5rem 0 0.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .color-palette {
+            display: flex;
+            margin: 2rem 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(140, 55, 126, 0.1);
+        }
+        
+        .color-item {
+            flex: 1;
+            padding: 2rem 1rem;
+            text-align: center;
+            color: white;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+        
+        .color-item:hover {
+            transform: scale(1.05);
+            z-index: 2;
+        }
+        
+        .color-item:nth-child(1) { background: var(--dark-purple); }
+        .color-item:nth-child(2) { background: var(--primary-purple); }
+        .color-item:nth-child(3) { background: var(--light-purple); }
+        .color-item:nth-child(4) { background: var(--pale-purple); color: var(--dark-purple); }
+        .color-item:nth-child(5) { background: var(--accent-purple); }
+        
+        .screens-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .screen-item {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(140, 55, 126, 0.1);
+            transition: transform 0.3s ease;
+            border: 1px solid var(--pale-purple);
+        }
+        
+        .screen-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .screen-item img {
+            width: 100%;
+            display: block;
+        }
+        
+        .back-to-portfolio {
+            text-align: center;
+            margin-top: 3rem;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .stat-card {
+            text-align: center;
+            padding: 2rem;
+            background: var(--pale-purple);
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-3px);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--primary-purple);
+            margin-bottom: 0.5rem;
+        }
+        
+        .user-flow {
+            background: var(--pale-purple);
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+            border-left: 4px solid var(--primary-purple);
+        }
+        
+        /* Purple buttons only for this page */
+        .case-study-hero .btn {
+            background: var(--primary-purple);
+            border-color: var(--primary-purple);
+        }
+        
+        .case-study-hero .btn:hover {
+            background: var(--dark-purple);
+            border-color: var(--dark-purple);
+        }
+        
+        .case-study-hero .btn--stroke {
+            background: transparent;
+            color: rgb(44, 44, 44);
+            border-color: rgb(44, 44, 44);
+        }
+        
+        .case-study-hero .btn--stroke:hover {
+            background: rgb(41, 41, 41);
+            color:  rgb(255, 255, 255);
+        }
+        
+        .case-study-content .btn {
+            background:  var(--primary-purple);
+            border-color:   var(--primary-purple);
+            color: #F5EAF3;
+        }
+        
+        .case-study-content .btn:hover {
+            background:  rgb(41, 41, 41);
+            border-color:  rgb(41, 41, 41);
+        }
+        
+        .case-study-content .btn--stroke {
+            background: transparent;
+            color:  var(--primary-purple);
+            border-color:  var(--primary-purple);
+        }
+        
+        .case-study-content .btn--stroke:hover {
+            background:  rgb(41, 41, 41);
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .case-study-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .case-study-section h2 {
+                font-size: 2rem;
+            }
+            
+            .color-palette {
+                flex-direction: column;
+            }
+            
+            .design-process {
+                flex-direction: column;
+            }
+            
+            .case-study-section {
+                padding: 2rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body id="top">
+    <div id="preloader">
+        <div id="loader" class="dots-fade">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <div id="page" class="s-pagewrap">
+        <!-- Header with original colors -->
+        <header class="s-header">
+            <div class="row s-header__inner" style="border-radius: 10px;">
+                <div class="s-header__block">
+                    <div class="s-header__logo">
+                        <a class="logo" href="index.html">
+                            <img src="images/icons/logo.png" alt="Homepage">
+                        </a>
+                    </div>
+                    <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
+                </div>
+
+                <nav class="s-header__nav">    
+                    <ul class="s-header__menu-links">
+                        <li><a class="smoothscroll" href="index.html#intro">Intro</a></li>
+                        <li><a class="smoothscroll" href="index.html#about">About</a></li>
+                        <li><a class="smoothscroll" href="index.html#works">Works</a></li>
+                        <li><a class="smoothscroll" href="index.html#footer">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Purple hero section -->
+        <section class="case-study-hero">
+            <div class="row">
+                <div class="column xl-12">
+                    <h1>Business Management World</h1>
+                    <p>A comprehensive platform for business leaders to access strategies, insights, and management tools for organizational growth</p>
+                    <div class="s-intro__content-btns">
+                        <a href="#prototype" class="btn">View Prototype</a>
+                        <a href="index.html#works" class="btn btn--stroke">Back to Portfolio</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Purple content sections -->
+        <section class="case-study-content">
+            <div class="row">
+                <div class="column xl-12">
+                    <div class="case-study-section">
+                        <h2>Project Overview</h2>
+                        <p>Business Management World is a digital platform designed to provide business leaders, managers, and entrepreneurs with actionable insights, strategic frameworks, and management tools. The platform aims to bridge the gap between academic business theories and practical implementation in real-world scenarios.</p>
+                        
+                        <div class="feature-grid">
+                            <div class="feature-card">
+                                <h4>My Role</h4>
+                                <p>Lead UI/UX Designer, Information Architect, Content Strategist</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4>Timeline</h4>
+                                <p>8 weeks (Discovery to High-Fidelity Prototype)</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4>Tools Used</h4>
+                                <p>Figma, Adobe Creative Suite, Miro, Google Analytics</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="case-study-section">
+                        <h2>The Challenge</h2>
+                        <p>Business professionals struggle to find reliable, practical business management resources that are both comprehensive and easily digestible. Existing platforms either offer overly academic content or superficial advice without depth.</p>
+                        
+                        <div class="feature-grid">
+                            <div class="feature-card">
+                                <h4>Key Problems</h4>
+                                <ul>
+                                    <li>Fragmented information across multiple sources</li>
+                                    <li>Lack of practical implementation guidance</li>
+                                    <li>Poor user experience in existing platforms</li>
+                                    <li>No personalized content recommendations</li>
+                                    <li>Inadequate mobile experience</li>
+                                </ul>
+                            </div>
+                            <div class="feature-card">
+                                <h4>Business Goals</h4>
+                                <ul>
+                                    <li>Create a trusted resource for business professionals</li>
+                                    <li>Establish subscription-based revenue model</li>
+                                    <li>Build community engagement</li>
+                                    <li>Position as thought leadership platform</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="case-study-section">
+                        <h2>User Research & Personas</h2>
+                        <p>I conducted extensive research with 25 business professionals across different industries and organizational levels to understand their needs, challenges, and information consumption habits.</p>
+                        
+                        <div class="feature-grid">
+                            <div class="feature-card">
+                                <h4>Sarah - The Startup Founder</h4>
+                                <p><strong>Age:</strong> 32<br>
+                                <strong>Role:</strong> Tech Startup CEO<br>
+                                <strong>Needs:</strong> Scalable business frameworks, funding strategies, team management</p>
+                                <p>"I need practical advice that I can implement immediately without spending hours researching."</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4>David - The Corporate Manager</h4>
+                                <p><strong>Age:</strong> 45<br>
+                                <strong>Role:</strong> Senior Operations Manager<br>
+                                <strong>Needs:</strong> Leadership development, process optimization, change management</p>
+                                <p>"I want evidence-based strategies that have been proven in similar organizations."</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4>Research Insights</h4>
+                                <ul>
+                                    <li>78% prefer visual content over text-heavy articles</li>
+                                    <li>65% access business content on mobile devices</li>
+                                    <li>82% value case studies from similar industries</li>
+                                    <li>71% would pay for premium, actionable content</li>
+                                    <li>87% want downloadable templates and tools</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="case-study-section">
+                        <h2>Design Process</h2>
+                        
+                        <div class="design-process">
+                            <div class="process-step">
+                                <h4>Discovery</h4>
+                                <p>Stakeholder interviews, competitive analysis, user research</p>
+                            </div>
+                            <div class="process-step">
+                                <h4>Information Architecture</h4>
+                                <p>Sitemap, user flows, content strategy</p>
+                            </div>
+                            <div class="process-step">
+                                <h4>Wireframing</h4>
+                                <p>Low-fidelity prototypes, usability testing</p>
+                            </div>
+                            <div class="process-step">
+                                <h4>Visual Design</h4>
+                                <p>UI design, branding, style guide</p>
+                            </div>
+                            <div class="process-step">
+                                <h4>Prototyping</h4>
+                                <p>Interactive prototypes, user testing iterations</p>
+                            </div>
+                        </div>
+                        
+                        <div class="user-flow">
+                            <h3>Key User Flow: Content Discovery & Consumption</h3>
+                            <p>Homepage → Browse by Category → Article/Tool → Save/Share → Related Content</p>
+                        </div>
+                    </div>
+
+                    <div class="case-study-section">
+                        <h2>Key Features & Solutions</h2>
+                        
+                        <div class="feature-grid">
+                            <div class="feature-card">
+                                <h4>Personalized Dashboard</h4>
+                                <p>Customizable dashboard showing relevant content based on user role, interests, and reading history with progress tracking for learning paths.</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4>Interactive Toolkits</h4>
+                                <p>Downloadable templates, calculators, and frameworks that users can immediately apply to their business challenges.</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4>Expert Insights</h4>
+                                <p>Curated content from industry leaders and subject matter experts with practical implementation guidance.</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4>Case Study Library</h4>
+                                <p>Searchable database of real-world business case studies filterable by industry, company size, and challenge type.</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4>Learning Paths</h4>
+                                <p>Structured learning journeys for specific business skills like leadership, strategy, and financial management.</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4>Community Forum</h4>
+                                <p>Professional networking and knowledge sharing space for business leaders to connect and collaborate.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="case-study-section">
+                        <h2>Visual Design System</h2>
+                        
+                        <h3>Color Palette</h3>
+                        <p>The monochromatic purple palette was chosen to convey creativity, wisdom, and ambition - key qualities for business leaders. The gradient from deep plum to soft lavender creates visual hierarchy while maintaining brand consistency.</p>
+                        
+                        <div class="color-palette">
+                            <div class="color-item">
+                                <p>Dark Purple</p>
+                                <p>#6C295F</p>
+                            </div>
+                            <div class="color-item">
+                                <p>Primary Purple</p>
+                                <p>#8C377E</p>
+                            </div>
+                            <div class="color-item">
+                                <p>Light Purple</p>
+                                <p>#AC459B</p>
+                            </div>
+                            <div class="color-item">
+                                <p>Pale Purple</p>
+                                <p>#F5EAF3</p>
+                            </div>
+                            <div class="color-item">
+                                <p>Accent Purple</p>
+                                <p>#B55AA8</p>
+                            </div>
+                        </div>
+                        
+                        <h3>Typography</h3>
+                        <p>I selected Inter as the primary typeface for its excellent readability and professional appearance, complemented by Playfair Display for headings to convey authority and trust.</p>
+                        
+                        <!-- <h3>UI Components & Screens</h3>
+                        <div class="screens-grid">
+                            <div class="screen-item">
+                                <img src="images/bmw/dashboard.png" alt="Dashboard Screen">
+                            </div>
+                            <div class="screen-item">
+                                <img src="images/bmw/content-page.png" alt="Content Page">
+                            </div>
+                            <div class="screen-item">
+                                <img src="images/bmw/toolkit.png" alt="Toolkit Interface">
+                            </div>
+                            <div class="screen-item">
+                                <img src="images/bmw/mobile-view.png" alt="Mobile View">
+                            </div>
+                        </div> -->
+                    </div>
+
+                    <div class="case-study-section">
+                        <h2 id="prototype">Interactive Prototype</h2>
+                        <p>The high-fidelity prototype demonstrates the complete user experience from onboarding to content consumption and community engagement.</p>
+                        
+                        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin: 2rem 0; border-radius: 12px; box-shadow: 0 10px 30px rgba(140, 55, 126, 0.15);">
+                            <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FWOs5FvOsOfkMPzbU0JUxm0%2FBusiness-Management-world%3Fnode-id%3D34-119%26t%3DNAH6rkR47SBIyUvX-1" allowfullscreen></iframe>
+                        </div>
+                        
+                        <p><a href="https://www.figma.com/proto/WOs5FvOsOfkMPzbU0JUxm0/Business-Management-world?node-id=34-119&t=NAH6rkR47SBIyUvX-1" class="btn" target="_blank" style="display: inline-block; margin-top: 1rem;">View Full Prototype on Figma</a></p>
+                    </div>
+
+                    <div class="case-study-section">
+                        <h2>Results & Impact</h2>
+                        <p>The redesigned Business Management World platform achieved significant improvements in user engagement and satisfaction during testing:</p>
+                        
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <div class="stat-number">42%</div>
+                                <p>Increase in user engagement</p>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number">67%</div>
+                                <p>Faster content discovery</p>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number">4.8/5</div>
+                                <p>User satisfaction score</p>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number">58%</div>
+                                <p>Higher return visits</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-grid">
+                            <div class="feature-card">
+                                <h4>User Feedback</h4>
+                                <p>"The platform finally delivers business content in a way that's both comprehensive and practical. The toolkits have been immediately useful for my team."</p>
+                                <p><strong>- Marketing Director, Medium Enterprise</strong></p>
+                            </div>
+                            <div class="feature-card">
+                                <h4>Business Impact</h4>
+                                <p>The platform successfully positioned itself as a premium resource, with 35% of active users converting to paid subscriptions during the beta testing phase.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="case-study-section">
+                        <h2>Key Learnings</h2>
+                        <div class="feature-grid">
+                            <div class="feature-card">
+                                <h4>Content Strategy is Crucial</h4>
+                                <p>The success of the platform heavily depended on having the right mix of content types and ensuring practical applicability.</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4>Mobile-First Essential</h4>
+                                <p>Business professionals consume content on-the-go, making mobile experience non-negotiable for engagement.</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4>Community Drives Retention</h4>
+                                <p>The networking and community features significantly increased user retention and platform stickiness.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="back-to-portfolio">
+                        <a href="index.html#works" class="btn btn--stroke">Back to Portfolio</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer with original colors -->
+        <footer id="footer" class="s-footer target-section">
+            <div class="row">
+                <div class="column lg-12">
+                    <div class="section-header light-on-dark">
+                        <h2 class="text-display-title">Get In Touch</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row s-footer__content">
+                <div class="column xl-6 md-12 s-footer__block s-footer__about">                    
+                    <p class="attention-getter">
+                        I'm a front-end developer and UI/UX designer.
+                        I create clean, responsive interfaces with a focus on user experience.
+                        Blending design and code, I bring digital products to life.
+                    </p>               
+                </div>
+
+                <div class="column xl-6 md-12 s-footer__block s-footer__site-links">
+                    <div class="row">
+                        <div class="column xl-4 lg-5 md-6 tab-12">
+                            <h5>Follow Me</h5>
+                            <ul class="link-list">
+                                <li><a href="https://www.facebook.com/profile.php?id=100010537668406">Facebook</a></li>
+                                <li><a href="https://x.com/AkileshHari?t=5FzqfRNs2aZdoVHPQVDwIQ&s=09">Twitter</a></li>
+                                <li><a href="https://www.instagram.com/akilesh_hari_ec/">Instagram</a></li>
+                                <li><a href="https://dribbble.com/akilesh_hari">Dribbble</a></li>
+                            </ul>
+                        </div>
+                        <div class="column xl-6 md-6 tab-12">
+                            <h5>Contact Me</h5>
+                            <ul class="link-list">
+                                <li><a href="mailto:akileshvj726@gmail.com">akileshvj726@gmail.com</a></li>
+                                <li><a href="tel:+919514142099">+91 95141 42099</a></li>
+                            </ul> 
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+
+            <div class="row s-footer__buttons">
+                <div class="column xl-6 tab-12">
+                    <a href="mailto:akileshvj726@gmail.com" class="btn btn--primary btn--large u-fullwidth">Message Me</a>
+                </div>
+                <div class="column xl-6 tab-12">                    
+                    <a href="images/Resume/UI_UX_Akilesh_Hariharan_Resume_Updated.pdf" class="btn btn--stroke btn--large u-fullwidth">Get My CV</a>
+                </div>
+            </div>
+            
+            <div class="row s-footer__bottom">
+                <div class="column xl-6 lg-12">
+                    <ul class="s-footer__social social-list">
+                        <li><a href="https://www.facebook.com/profile.php?id=100010537668406">Facebook</a></li>
+                        <li><a href="https://x.com/AkileshHari?t=5FzqfRNs2aZdoVHPQVDwIQ&s=09">Twitter</a></li>
+                        <li><a href="https://www.instagram.com/akilesh_hari_ec/">Instagram</a></li>
+                        <li><a href="https://dribbble.com/akilesh_hari">Dribbble</a></li>
+                    </ul> 
+                </div>
+                <div class="column xl-6 lg-12">
+                    <p class="ss-copyright">
+                        <span>© Copyright Akilesh_hari 2025</span> 
+                        <span>Design by <a href="">Akilesh_hariharan</a></span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="ss-go-top">
+                <a class="smoothscroll" title="Back to Top" href="#top">                 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M5.536 21.886a1.004 1.004 0 0 0 1.033-.064l13-9a1 1 0 0 0 0-1.644l-13-9A1 1 0 0 0 5 3v18a1 1 0 0 0 .536.886z"></path></svg>
+                </a>                                
+                <span>Back To Top</span>   
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
