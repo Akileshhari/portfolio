@@ -42,20 +42,17 @@ function Contact() {
       if (res.ok || window.location.hostname === 'localhost') {
         setStatus({
           type: 'success',
-          message: `✓ Thank you, ${formData.name}! Your message has been sent successfully. I will reply to ${formData.email} shortly.`,
+          message: `✓ Thank you, ${formData.name}! Your message has been sent directly to akileshvj726@gmail.com. I will reply to ${formData.email} shortly.`,
         })
         setFormData({ name: '', email: '', message: '' })
       } else {
-        throw new Error(`Netlify returned ${res.status}`)
+        throw new Error(`Server status: ${res.status}`)
       }
     } catch {
-      // Direct graceful fallback: trigger pre-filled mailto
-      const mailtoUrl = `mailto:${RECIPIENT_EMAIL}?subject=Portfolio Inquiry from ${encodeURIComponent(formData.name)}&body=${encodeURIComponent(formData.message + '\n\nReply to: ' + formData.email)}`
       setStatus({
-        type: 'fallback',
-        message: 'Opening your email client to send your message directly to akileshvj726@gmail.com...',
+        type: 'error',
+        message: 'Could not send message automatically. Please email akileshvj726@gmail.com directly or check your connection.',
       })
-      window.location.href = mailtoUrl
     } finally {
       setIsSubmitting(false)
     }
