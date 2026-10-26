@@ -4,10 +4,13 @@
   --navbar-glow: rgba(168, 85, 247, 0.35);
   --navbar-height: 72px;
 
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 100;
-  background: rgba(8, 6, 13, 0.78);
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(8, 6, 13, 0.88);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
