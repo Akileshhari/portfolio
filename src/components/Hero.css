@@ -128,6 +128,7 @@
   margin: 0 auto;
   padding: 0 24px;
   width: 100%;
+  box-sizing: border-box;
 }
 
 /* Main 2-Column Hero Layout */
@@ -137,6 +138,8 @@
   align-items: center;
   gap: 48px;
   margin-bottom: 52px;
+  width: 100%;
+  min-width: 0;
 }
 
 /* Content Left Column */
@@ -144,6 +147,8 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  width: 100%;
+  min-width: 0;
 }
 
 /* Status Badge with Live Radar Pulse */
@@ -404,12 +409,16 @@
   position: relative;
   display: flex;
   justify-content: center;
+  width: 100%;
+  min-width: 0;
 }
 
 .hero__terminal-card {
   position: relative;
   width: 100%;
   max-width: 500px;
+  min-width: 0;
+  box-sizing: border-box;
   background: rgba(15, 11, 26, 0.85);
   border: 1px solid rgba(168, 85, 247, 0.3);
   border-radius: 18px;
@@ -1012,12 +1021,16 @@
 @media (max-width: 1040px) {
   .hero__layout {
     grid-template-columns: 1fr;
-    gap: 48px;
+    gap: 40px;
+    width: 100%;
+    min-width: 0;
   }
 
   .hero__content {
     align-items: center;
     text-align: center;
+    width: 100%;
+    min-width: 0;
   }
 
   .hero__role-wrapper {
@@ -1038,102 +1051,222 @@
 
   .hero__visual {
     width: 100%;
+    min-width: 0;
   }
 
   .hero__terminal-card {
     max-width: 580px;
+    width: 100%;
+    min-width: 0;
   }
 }
 
 @media (max-width: 860px) {
   .hero {
-    padding: 32px 0 44px;
+    padding: 28px 0 40px;
+  }
+
+  .hero__container {
+    padding: 0 20px;
   }
 
   .hero__stats {
     grid-template-columns: repeat(2, 1fr);
     gap: 14px;
-    padding-top: 28px;
+    padding-top: 24px;
   }
 
   .hero__banner-section {
-    margin-top: 44px;
-  }
-
-  .hero__floating-badge--top {
-    right: 8px;
-    top: -18px;
-  }
-
-  .hero__floating-badge--bottom {
-    left: 8px;
-    bottom: -18px;
+    margin-top: 40px;
   }
 
   .hero__banner-section::before,
   .hero__banner-section::after {
-    width: 60px;
+    width: 40px;
+  }
+
+  /* Make floating badges static on tablet & mobile so they never overflow on the right */
+  .hero__floating-badge {
+    position: static;
+    margin-top: 10px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    animation: none;
+    transform: none !important;
+  }
+
+  .hero__floating-badge--top,
+  .hero__floating-badge--bottom {
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
   }
 }
 
 @media (max-width: 600px) {
+  .hero {
+    padding: 20px 0 36px;
+  }
+
+  .hero__container {
+    padding: 0 16px;
+  }
+
   .hero__badge {
     padding: 5px 12px;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
   .hero__badge-text {
-    font-size: 0.78rem;
+    font-size: 0.76rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .hero__title-name {
+    font-size: clamp(2rem, 9.5vw, 2.75rem);
+    word-break: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+  }
+
+  .hero__role-wrapper {
+    font-size: 1.15rem;
+    gap: 6px;
+  }
+
+  .hero__description {
+    font-size: 0.92rem;
+    line-height: 1.6;
+    margin-bottom: 24px;
   }
 
   .hero__actions {
     flex-direction: column;
     width: 100%;
+    gap: 10px;
   }
 
   .hero__btn {
     width: 100%;
+    box-sizing: border-box;
+    padding: 12px 20px;
+    font-size: 0.94rem;
   }
 
   .hero__contact-strip {
     flex-direction: column;
     width: 100%;
+    gap: 8px;
   }
 
   .hero__social-pill {
     width: 100%;
     justify-content: center;
+    box-sizing: border-box;
+    padding: 8px 14px;
   }
 
-  .hero__floating-badge {
-    position: static;
-    margin-top: 10px;
-    width: 100%;
-    box-sizing: border-box;
-    animation: none;
+  .hero__social-pill span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   .hero__visual {
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .hero__terminal-card {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow: hidden;
+    border-radius: 14px;
+  }
+
+  .hero__terminal-header {
+    padding: 8px 12px;
+    gap: 6px;
+  }
+
+  /* Hide the right-side badge in terminal header on mobile to prevent overflow */
+  .hero__terminal-tag {
+    display: none;
+  }
+
+  .hero__terminal-tabs {
+    gap: 4px;
+  }
+
+  .hero__terminal-tab-btn {
+    font-size: 0.72rem;
+    padding: 3px 8px;
+  }
+
+  .hero__terminal-body {
+    padding: 12px 12px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
   .hero__code {
-    font-size: 0.76rem;
+    font-size: 0.74rem;
+    line-height: 1.52;
+  }
+
+  /* Fade gradient on marquee ticker: Keep very small so right side cards aren't hidden */
+  .hero__banner-section::before,
+  .hero__banner-section::after {
+    width: 20px;
   }
 
   .hero__stats {
     grid-template-columns: 1fr;
-    gap: 12px;
+    gap: 10px;
+    padding-top: 20px;
   }
 
   .hero__stat-card {
-    padding: 16px;
+    padding: 14px 16px;
     text-align: center;
   }
 
   .hero__game-bar {
-    padding: 6px 16px;
-    font-size: 0.78rem;
+    padding: 6px 14px;
+    font-size: 0.76rem;
+    gap: 8px;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero__container {
+    padding: 0 12px;
+  }
+
+  .hero__title-name {
+    font-size: 1.85rem;
+  }
+
+  .hero__role-wrapper {
+    font-size: 1.05rem;
+  }
+
+  .hero__terminal-body {
+    padding: 10px 8px;
+  }
+
+  .hero__code {
+    font-size: 0.68rem;
   }
 }
