@@ -1,0 +1,251 @@
+.footer {
+  background: #050409;
+  border-top: 1px solid rgba(168, 85, 247, 0.2);
+  padding: 56px 0 36px;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 20%;
+  right: 20%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #a855f7, #ec4899, transparent);
+}
+
+.footer__container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.footer__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 28px;
+  padding-bottom: 36px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer__brand {
+  max-width: 400px;
+}
+
+.footer__logo-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  margin-bottom: 8px;
+}
+
+.footer__logo-img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 10px rgba(168, 85, 247, 0.4));
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.footer__logo-link:hover .footer__logo-img {
+  transform: rotate(-6deg) scale(1.08);
+  filter: drop-shadow(0 0 16px rgba(236, 72, 153, 0.6));
+}
+
+.footer__logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+}
+
+.footer__logo-accent {
+  color: #a855f7;
+}
+
+.footer__tagline {
+  margin: 8px 0 0;
+  font-size: 0.88rem;
+  color: #9f9ab3;
+  line-height: 1.6;
+}
+
+/* Highlighted Navigation Pills */
+.footer__nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.footer__nav-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 18px;
+  border-radius: 999px;
+  background: rgba(168, 85, 247, 0.08);
+  border: 1px solid rgba(168, 85, 247, 0.35);
+  color: #f1ecf9;
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.footer__nav-pill:hover {
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.35), rgba(236, 72, 153, 0.35));
+  border-color: rgba(236, 72, 153, 0.7);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 18px rgba(168, 85, 247, 0.4);
+}
+
+.footer__top-btn {
+  padding: 10px 20px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-family: inherit;
+  white-space: nowrap;
+}
+
+.footer__top-btn:hover {
+  background: linear-gradient(135deg, #a855f7, #ec4899);
+  border-color: transparent;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(168, 85, 247, 0.4);
+}
+
+/* Bottom Highlighted Links Strip */
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-top: 28px;
+}
+
+.footer__copy {
+  margin: 0;
+  font-size: 0.84rem;
+  color: #8b85a3;
+}
+
+.footer__socials {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Highlighted Contact & Social Pills */
+.footer__contact-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+}
+
+.footer__pill-icon {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+/* Email Pill Highlight */
+.footer__contact-pill--email {
+  background: rgba(168, 85, 247, 0.12);
+  border: 1px solid rgba(168, 85, 247, 0.45);
+  color: #e2d9f3;
+}
+
+.footer__contact-pill--email:hover {
+  background: linear-gradient(135deg, #a855f7, #ec4899);
+  border-color: transparent;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(168, 85, 247, 0.5);
+}
+
+/* Phone Pill Highlight */
+.footer__contact-pill--phone {
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  color: #a7f3d0;
+}
+
+.footer__contact-pill--phone:hover {
+  background: #10b981;
+  border-color: #10b981;
+  color: #042f2e;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 18px rgba(16, 185, 129, 0.45);
+}
+
+/* LinkedIn Pill Highlight */
+.footer__contact-pill--linkedin {
+  background: rgba(14, 165, 233, 0.1);
+  border: 1px solid rgba(14, 165, 233, 0.35);
+  color: #bae6fd;
+}
+
+.footer__contact-pill--linkedin:hover {
+  background: #0ea5e9;
+  border-color: #0ea5e9;
+  color: #082f49;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 18px rgba(14, 165, 233, 0.45);
+}
+
+/* Dribbble Pill Highlight */
+.footer__contact-pill--dribbble {
+  background: rgba(234, 76, 137, 0.1);
+  border: 1px solid rgba(234, 76, 137, 0.35);
+  color: #fbcfe8;
+}
+
+.footer__contact-pill--dribbble:hover {
+  background: #ea4c89;
+  border-color: #ea4c89;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 18px rgba(234, 76, 137, 0.45);
+}
+
+@media (max-width: 860px) {
+  .footer__top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer__socials {
+    width: 100%;
+  }
+
+  .footer__contact-pill {
+    width: 100%;
+    justify-content: center;
+  }
+}

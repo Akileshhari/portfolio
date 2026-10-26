@@ -1,0 +1,20 @@
+<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="ah-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c084fc"/>
+      <stop offset="50%" stop-color="#ec4899"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+    <linearGradient id="ah-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#191129"/>
+      <stop offset="100%" stop-color="#090612"/>
+    </linearGradient>
+  </defs>
+  <rect width="48" height="48" rx="12" fill="url(#ah-bg)" stroke="url(#ah-grad)" stroke-width="2"/>
+  <!-- Stylized Monogram AH -->
+  <path d="M11 34L17.5 14L24 34" stroke="url(#ah-grad)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M13.5 27H21.5" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M28 14V34" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+  <path d="M37 14V34" stroke="url(#ah-grad)" stroke-width="3" stroke-linecap="round"/>
+  <path d="M28 24H37" stroke="url(#ah-grad)" stroke-width="2.8" stroke-linecap="round"/>
+</svg>

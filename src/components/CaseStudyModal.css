@@ -1,0 +1,434 @@
+.cs-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(5, 3, 10, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: modalFadeIn 0.25s ease forwards;
+}
+
+.cs-modal-card {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  max-height: 90vh;
+  background: rgba(14, 10, 24, 0.96);
+  border: 1px solid rgba(168, 85, 247, 0.35);
+  border-radius: 22px;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.8), 0 0 40px rgba(168, 85, 247, 0.2);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: modalSlideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Header */
+.cs-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 24px;
+  background: rgba(255, 255, 255, 0.02);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  flex: none;
+}
+
+.cs-modal-header__info {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.cs-modal-tag {
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #c084fc;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: rgba(168, 85, 247, 0.15);
+  border: 1px solid rgba(168, 85, 247, 0.35);
+}
+
+.cs-modal-confidential {
+  font-size: 0.76rem;
+  color: #10b981;
+  font-weight: 600;
+  background: rgba(16, 185, 129, 0.1);
+  padding: 4px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+.cs-modal-close {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #f1ecf9;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cs-modal-close:hover {
+  background: rgba(236, 72, 153, 0.2);
+  border-color: rgba(236, 72, 153, 0.5);
+  transform: rotate(90deg);
+}
+
+/* Body */
+.cs-modal-body {
+  padding: 28px 32px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+/* Hero Section */
+.cs-hero {
+  margin-bottom: 32px;
+}
+
+.cs-hero__title {
+  font-size: clamp(1.6rem, 3.5vw, 2.3rem);
+  font-weight: 800;
+  line-height: 1.25;
+  color: #ffffff;
+  margin: 0 0 10px;
+  letter-spacing: -0.02em;
+}
+
+.cs-hero__subtitle {
+  font-size: 1.05rem;
+  color: #c084fc;
+  margin: 0 0 24px;
+  line-height: 1.6;
+}
+
+/* Metadata Bar */
+.cs-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  padding: 16px 20px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.cs-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.cs-meta-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #8b85a3;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.cs-meta-val {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* Metrics Strip */
+.cs-metrics-strip {
+  margin-bottom: 36px;
+  padding: 22px 24px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.12), rgba(236, 72, 153, 0.08));
+  border: 1px solid rgba(168, 85, 247, 0.3);
+}
+
+.cs-metrics-title {
+  font-size: 0.96rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 16px;
+}
+
+.cs-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+.cs-metric-card {
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: rgba(10, 8, 18, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.cs-metric-card__value {
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: #38bdf8;
+  margin-bottom: 4px;
+}
+
+.cs-metric-card__label {
+  font-size: 0.8rem;
+  color: #d1cbe0;
+  line-height: 1.4;
+}
+
+/* Generic Section */
+.cs-section {
+  margin-bottom: 32px;
+}
+
+.cs-section__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.cs-section__text {
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: #b9b5c6;
+  margin: 0;
+}
+
+/* Split Grid Problem vs Solution */
+.cs-split-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.cs-box {
+  padding: 22px;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cs-box--problem {
+  background: rgba(239, 68, 68, 0.06);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+}
+
+.cs-box--solution {
+  background: rgba(16, 185, 129, 0.06);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+.cs-box__header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.cs-box__icon {
+  font-size: 1.3rem;
+}
+
+.cs-box__title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.cs-box__list {
+  margin: 0;
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #d8d3e5;
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+/* Features Grid */
+.cs-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+}
+
+.cs-feature-card {
+  padding: 18px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.2s ease;
+}
+
+.cs-feature-card:hover {
+  background: rgba(168, 85, 247, 0.08);
+  border-color: rgba(168, 85, 247, 0.35);
+  transform: translateY(-2px);
+}
+
+.cs-feature-card__icon {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.cs-feature-card__title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 6px;
+}
+
+.cs-feature-card__desc {
+  font-size: 0.86rem;
+  color: #a7a2bc;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* Security Note */
+.cs-security-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px 20px;
+  border-radius: 14px;
+  background: rgba(16, 185, 129, 0.06);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  margin-top: 12px;
+}
+
+.cs-security-icon {
+  font-size: 1.5rem;
+  flex: none;
+}
+
+.cs-security-note strong {
+  display: block;
+  font-size: 0.92rem;
+  color: #34d399;
+  margin-bottom: 4px;
+}
+
+.cs-security-note p {
+  font-size: 0.85rem;
+  color: #d1cbe0;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* Modal Footer */
+.cs-modal-footer {
+  padding: 18px 24px;
+  background: rgba(255, 255, 255, 0.02);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 14px;
+  flex: none;
+}
+
+.cs-modal-btn {
+  padding: 11px 22px;
+  border-radius: 10px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cs-modal-btn--primary {
+  background: linear-gradient(135deg, #a855f7, #ec4899);
+  color: #ffffff;
+  border: none;
+  box-shadow: 0 4px 18px rgba(168, 85, 247, 0.35);
+}
+
+.cs-modal-btn--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(168, 85, 247, 0.55);
+}
+
+.cs-modal-btn--secondary {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #d1cbe0;
+}
+
+.cs-modal-btn--secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+/* Animations */
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modalSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .cs-modal-card {
+    max-height: 94vh;
+    border-radius: 16px;
+  }
+
+  .cs-modal-body {
+    padding: 20px 18px;
+  }
+
+  .cs-split-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cs-modal-footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cs-modal-btn {
+    width: 100%;
+  }
+}
+
