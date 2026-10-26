@@ -69,7 +69,7 @@ function Footer() {
         {/* Highlighted Direct Connect Links */}
         <div className="footer__bottom">
           <p className="footer__copy">
-            © {CURRENT_YEAR} Akilesh Hariharan. Built with React.js, Vite &amp; Poppins.
+            © {CURRENT_YEAR} Akilesh Hariharan. All rights reserved.
           </p>
           <div className="footer__socials">
             <a
