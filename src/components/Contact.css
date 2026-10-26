@@ -248,6 +248,24 @@
   color: #fbbf24;
 }
 
+.contact-form-alt {
+  margin: 6px 0 0;
+  text-align: center;
+  font-size: 0.82rem;
+  color: #9c95b3;
+}
+
+.contact-form-alt-link {
+  color: #c084fc;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.contact-form-alt-link:hover {
+  color: #ffffff;
+}
+
 @media (max-width: 860px) {
   .contact-layout {
     grid-template-columns: 1fr;

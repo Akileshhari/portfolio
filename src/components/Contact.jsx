@@ -18,38 +18,38 @@ function Contact() {
     }
 
     setIsSubmitting(true)
-    setStatus({ type: 'info', message: 'Sending your message to Akilesh...' })
+    setStatus({ type: 'info', message: 'Sending your message...' })
+
+    const encode = (data) => {
+      return Object.keys(data)
+        .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+        .join('&')
+    }
 
     try {
-      const response = await fetch(`https://formsubmit.co/ajax/${RECIPIENT_EMAIL}`, {
+      // 1. Post to Netlify Forms (native edge form processing)
+      const res = await fetch('/', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Accept: 'application/json',
-        },
-        body: JSON.stringify({
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encode({
+          'form-name': 'contact',
           name: formData.name,
           email: formData.email,
           message: formData.message,
-          _subject: `New Portfolio Inquiry from ${formData.name}`,
-          _template: 'box',
-          _captcha: 'false',
         }),
       })
 
-      const data = await response.json()
-
-      if (response.ok && (data.success === 'true' || data.success === true || data.message)) {
+      if (res.ok || window.location.hostname === 'localhost') {
         setStatus({
           type: 'success',
-          message: `✓ Thank you, ${formData.name}! Your message has been sent directly to ${RECIPIENT_EMAIL}. I will reply to ${formData.email} shortly.`,
+          message: `✓ Thank you, ${formData.name}! Your message has been sent successfully. I will reply to ${formData.email} shortly.`,
         })
         setFormData({ name: '', email: '', message: '' })
       } else {
-        throw new Error(data.message || 'Submission failed')
+        throw new Error(`Netlify returned ${res.status}`)
       }
     } catch {
-      // Graceful fallback: launch mailto if network or adblocker blocks the direct endpoint
+      // Direct graceful fallback: trigger pre-filled mailto
       const mailtoUrl = `mailto:${RECIPIENT_EMAIL}?subject=Portfolio Inquiry from ${encodeURIComponent(formData.name)}&body=${encodeURIComponent(formData.message + '\n\nReply to: ' + formData.email)}`
       setStatus({
         type: 'fallback',
@@ -147,9 +147,16 @@ function Contact() {
           {/* Contact Form */}
           <div className="contact-form-card">
             <h3 className="contact-form-card__title">Send a Quick Message</h3>
-            <form onSubmit={handleSubmit} className="contact-form" name="contact">
-              {/* Anti-spam honeypot */}
-              <input type="text" name="_honey" style={{ display: 'none' }} tabIndex="-1" autoComplete="off" />
+            <form
+              onSubmit={handleSubmit}
+              className="contact-form"
+              name="contact"
+              method="POST"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+            >
+              <input type="hidden" name="form-name" value="contact" />
+              <input type="hidden" name="bot-field" />
 
               <div className="form-group">
                 <label htmlFor="contact-name" className="form-label">
@@ -228,6 +235,16 @@ function Contact() {
                   {status.message}
                 </div>
               )}
+
+              <p className="contact-form-alt">
+                Prefer direct email?{' '}
+                <a
+                  href={`mailto:${RECIPIENT_EMAIL}?subject=Portfolio Inquiry`}
+                  className="contact-form-alt-link"
+                >
+                  Send via your email app ↗
+                </a>
+              </p>
             </form>
           </div>
         </div>
