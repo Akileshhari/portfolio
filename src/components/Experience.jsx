@@ -4,7 +4,7 @@ const EXPERIENCES = [
   {
     role: 'UI Developer',
     company: 'SciTech Patent Art Services Pvt. Ltd',
-    location: 'Chennai, India',
+    location: 'Hyderabad, India',
     period: 'Nov 2025 – Present',
     badge: 'Current Role',
     highlights: [
