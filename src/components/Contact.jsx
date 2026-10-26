@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './Contact.css'
 
 const RECIPIENT_EMAIL = 'akileshvj726@gmail.com'
+const FORMSUBMIT_TOKEN = '5b9256e87bdf0d8ffaa7cf3496f1d275'
 
 function Contact() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' })
@@ -20,38 +21,51 @@ function Contact() {
     setIsSubmitting(true)
     setStatus({ type: 'info', message: 'Sending your message...' })
 
-    const encode = (data) => {
-      return Object.keys(data)
-        .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-        .join('&')
+    // If running in local development mode, simulate instant successful send
+    if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+      setTimeout(() => {
+        setStatus({
+          type: 'success',
+          message: `✓ Thank you, ${formData.name}! Your message has been sent successfully.`,
+        })
+        setFormData({ name: '', email: '', message: '' })
+        setIsSubmitting(false)
+      }, 600)
+      return
     }
 
     try {
-      // 1. Post to Netlify Forms (native edge form processing)
-      const res = await fetch('/', {
+      const response = await fetch(`https://formsubmit.co/ajax/${FORMSUBMIT_TOKEN}`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: encode({
-          'form-name': 'contact',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
           name: formData.name,
           email: formData.email,
           message: formData.message,
+          _subject: `New Portfolio Inquiry from ${formData.name}`,
+          _template: 'box',
+          _captcha: 'false',
         }),
       })
 
-      if (res.ok || window.location.hostname === 'localhost') {
+      const data = await response.json()
+
+      if (response.ok && (data.success === 'true' || data.success === true || data.message)) {
         setStatus({
           type: 'success',
-          message: `✓ Thank you, ${formData.name}! Your message has been sent directly to akileshvj726@gmail.com. I will reply to ${formData.email} shortly.`,
+          message: `✓ Thank you, ${formData.name}! Your message has been sent directly to ${RECIPIENT_EMAIL}. I will reply to ${formData.email} shortly.`,
         })
         setFormData({ name: '', email: '', message: '' })
       } else {
-        throw new Error(`Server status: ${res.status}`)
+        throw new Error(data.message || 'Submission failed')
       }
     } catch {
       setStatus({
         type: 'error',
-        message: 'Could not send message automatically. Please email akileshvj726@gmail.com directly or check your connection.',
+        message: `Could not send message automatically. Please email ${RECIPIENT_EMAIL} directly.`,
       })
     } finally {
       setIsSubmitting(false)
@@ -147,13 +161,11 @@ function Contact() {
             <form
               onSubmit={handleSubmit}
               className="contact-form"
-              name="contact"
+              action={`https://formsubmit.co/${FORMSUBMIT_TOKEN}`}
               method="POST"
-              data-netlify="true"
-              data-netlify-honeypot="bot-field"
             >
-              <input type="hidden" name="form-name" value="contact" />
-              <input type="hidden" name="bot-field" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="text" name="_honey" style={{ display: 'none' }} tabIndex="-1" autoComplete="off" />
 
               <div className="form-group">
                 <label htmlFor="contact-name" className="form-label">

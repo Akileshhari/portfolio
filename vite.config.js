@@ -6,6 +6,20 @@ import { defineConfig } from 'vite'
 export default defineConfig({
   plugins: [
     react(),
-    babel({ presets: [reactCompilerPreset()] })
+    babel({ presets: [reactCompilerPreset()] }),
+    {
+      name: 'local-form-dev-handler',
+      configureServer(server) {
+        server.middlewares.use((req, res, next) => {
+          if (req.method === 'POST') {
+            res.statusCode = 200
+            res.setHeader('Content-Type', 'application/json')
+            res.end(JSON.stringify({ success: true, message: 'Message sent successfully' }))
+            return
+          }
+          next()
+        })
+      },
+    },
   ],
 })
